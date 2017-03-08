@@ -12,10 +12,10 @@ right(90);
 forward(x);
 right(45);
 }
-function triangle(){
-forward(50);
+function triangle(q){
+forward(q);
 right(90);
-forward(50);
+forward(q);
 right(135);
 forward(70);
 }
@@ -38,8 +38,26 @@ forward(y);
 left(135);
 forward(70);
 }
+function shape(type,size)
+{
+if (type==="triangle")
+{
+    triangle(size);
+    
+}
+else if (type==="square")
+{
+    square(size);
+}
+else if (type==="octagon")
+{
+    octagon(size);
+}
+}
 // Type your function call below
-square(70);
-triangle();
-octagon(50);
+
+shape("square",70);
+shape("triangle",50);
+shape("octagon",50);
+
 stamp();
